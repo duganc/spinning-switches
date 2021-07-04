@@ -1,0 +1,3 @@
+# Readme
+
+Four identical, unlabeled switches are wired in series to a light bulb.  The switches are simple buttons whose state cannot be directly observed, but can be changed by pushing; they are mounted on the corners of a rotatable square.  At any point, you may push, simultaneously, any subset of the buttons, but then an adversary spins the square.  Find a switch-pushing plan that is guaranteed to turn on the bulb in at most some fixed number of steps.
