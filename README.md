@@ -78,10 +78,10 @@ We've now eliminated the first three orbits as starting states.
 Now, note that any representative element from the other three orbits will map you into that orbit, and then within that orbit the same strategy will work.  That is, we can do
 
 `-1`, `D`, `-1`, `T` to get us into the `{T, B, L, R}` orbit and then repeat 
-`-1`, `D`, `-1` to eliminate those as starting options.  And then we can apply `w` to get us into the next orbit, repeat, and then apply `-w` to get us into the final one.  This leads to the following strategy:
+`-1`, `D`, `-1` to eliminate those as starting options.  And then we can apply `w` to get us into the next orbit, repeat, and then apply `T` to get us from the `w` orbit into the final one.  This leads to the following strategy:
 
 ```
--1, D, -1, T, -1, D, -1, w, -1, D, -1, -w, -1, D, -1
+-1, D, -1, T, -1, D, -1, w, -1, D, -1, T, -1, D, -1
 ```
 
 This solves the puzzle.  Running this Rust file (`cargo run` in the repo) will test it for `100000` trials.
