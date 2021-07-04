@@ -10,21 +10,37 @@ Four identical, unlabeled switches are wired in series to a light bulb.  The swi
 First, let's name each state that the square can be in:
 
 `1`: All on.
+
 `-1`: All off.
+
 `D`: Diagonal on.
+
 `A`: Antidiagonal on.
+
 `T`: Top two on.
+
 `B`: Bottom two on.
+
 `L`: Left two on.
+
 `R`: Right two on.
+
 `w`: Top left on.
+
 `x`: Top right on.
+
 `y`: Bottom right on.
+
 `z`: Bottom left on.
+
 `-w`: All but top left on.
+
 `-x`: All but top right on.
+
 `-y`: All but bottom right on.
+
 `-z`: All but bottom left on.
+
 
 Note that these form a group (let's call it `G`), and that they can be viewed both as states as well as the actions that the player can take.  For example, `T` + `D` = `R`, since the top left is flipped from on to off, the top right stays on, the bottom left stays off, and the bottom right is flipped from off to on.
 
@@ -32,12 +48,19 @@ The adversary, on the other hand, has four operations that he can use (let's cal
 `O_0`, `O_1`, `O_2`, `O_3`, rotate by 0, 90, 180, 270 degrees respectively.
 
 Next, note that there are closed orbits under `O`:
+
 `{1}`
+
 `{-1}`
+
 `{D, A}`
+
 `{T, B, L, R}`
+
 `{w, x, y, z}`
+
 `{-w, -x, -y, -z}`
+
 
 Since the adversary can always map within these orbits, to solve the puzzle, we have to avoid the adversary being able to create cycles in our strategy.  In particular, we want to rule out starting states by forcing them across the boundaries of these orbits.  
 
